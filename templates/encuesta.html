@@ -7,7 +7,7 @@
 
     <title>Evaluación Socioeconómica</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="static/css/estilos.css">
 </head>
 
 <body>
@@ -32,9 +32,9 @@
         </div>
 
 
-        <!-- ================================================= -->
-        <!-- SECCIÓN I - INFORMACIÓN GENERAL -->
-        <!-- ================================================= -->
+        <!-- _____________________________________ -->
+        <!-- SECCION I -->
+        <!-- _____________________________________ -->
 
         <section class="seccion activa">
 
@@ -93,7 +93,6 @@
 
                     </div>
 
-
                     <!-- Apellido materno -->
 
                     <div class="campo">
@@ -110,7 +109,6 @@
                         >
 
                     </div>
-
 
                     <!-- Nombres -->
 
@@ -129,10 +127,6 @@
 
                     </div>
 
-
-                   
-
-
                     <!-- Fecha nacimiento -->
 
                     <div class="campo">
@@ -148,7 +142,6 @@
                         >
 
                     </div>
-
 
                     <!-- Edad -->
 
@@ -168,7 +161,6 @@
                         >
 
                     </div>
-
 
                     <!-- Sexo -->
 
@@ -209,6 +201,12 @@
 
                     </div>
 
+                </div>
+            </div>
+
+
+            <div class="grupo">
+                <div class="grid">
                     <div class="indicacion">
 
                         <small>
@@ -471,6 +469,23 @@
 
                                 </div>
 
+                                <!-- Manzana -->
+
+                                <div class="campo">
+
+                                    <label for="manzana">
+                                        Mz.
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="manzana"
+                                        name="manzana"
+                                        placeholder="Ej. B"
+                                    >
+
+                                </div>
+
 
                                 <!-- Lote -->
 
@@ -485,24 +500,6 @@
                                         id="lote"
                                         name="lote"
                                         placeholder="Ej. 5"
-                                    >
-
-                                </div>
-
-
-                                <!-- Manzana -->
-
-                                <div class="campo">
-
-                                    <label for="manzana">
-                                        Mz.
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="manzana"
-                                        name="manzana"
-                                        placeholder="Ej. B"
                                     >
 
                                 </div>
@@ -546,52 +543,85 @@
                             </div>
 
 
+                    <div class="indicacion">
+
+                        <small>
+                            * Indica el lugar actual donde vive.
+                        </small>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="departamento">
+                            Departamento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departamento"
+                            name="departamento"
+                            placeholder="Departamento"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="provincia">
+                            Provincia
+                        </label>
+
+                        <input
+                            type="text"
+                            id="provincia"
+                            name="provincia"
+                            placeholder="Provincia"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="distrito">
+                            Distrito
+                        </label>
+
+                        <input
+                            type="text"
+                            id="distrito"
+                            name="distrito"
+                            placeholder="Distrito"
+                        >
+
+                    </div>
+
+
+
+
 
                 </div>
 
             </div>
 
-
-
-        
-
-
-
-            <!-- DOMICILIO -->
-
-
-
-
-
-            <!-- UBICACIÓN -->
-
-            <div class="grupo">
-
-                <h3>Ubicación</h3>
-
-                <div class="grid">
-
-                    
-
-                </div>
-
             </div>
+        </div>
+    </div>
 
 
-
+            
             <!-- INSTITUCIÓN EDUCATIVA -->
 
             <div class="grupo">
 
-                <h3>Institución educativa de procedencia</h3>
+                <h3>Institución educativa de la educacion basica de procedencia</h3>
 
                 <div class="grid">
 
                     <div class="campo campo-completo">
 
-                        <label for="institucion_procedencia">
-                            Institución educativa de educación básica
-                        </label>
 
                         <input
                             type="text"
@@ -605,6 +635,10 @@
                 </div>
 
 
+                    <br>
+
+             <div class="campo campo-completo">
+               <div class="grid"></div> 
                 <label>
                     Tipo de institución
                 </label>
@@ -651,16 +685,7 @@
 
                 </div>
 
-            </div>
-
-
-
-            <!-- REPITENCIA -->
-
-            <div class="grupo">
-
-                <h3>Repitencia y becas</h3>
-
+                <br>
 
                 <div class="campo">
 
@@ -747,7 +772,7 @@
                 <div class="campo">
 
                     <label>
-                        ¿Obtuvo una beca parcial?
+                        ¿Obtuvo una beca parial?
                     </label>
 
                     <div class="opciones">
@@ -794,8 +819,10 @@
 
                 </div>
 
-            </div>
 
+            </div>
+            </div>
+            </div>
 
 
             <!-- MOTIVO DE BECA -->
@@ -871,7 +898,7 @@
 
                 <div class="grid">
 
-                    <div class="campo">
+                    <div class="campo campo-completo">
 
                         <label for="programa">
                             Programa de estudios
@@ -902,12 +929,12 @@
                                 Selecciona
                             </option>
 
-                            <option value="1">1.er semestre</option>
-                            <option value="2">2.º semestre</option>
-                            <option value="3">3.er semestre</option>
-                            <option value="4">4.º semestre</option>
-                            <option value="5">5.º semestre</option>
-                            <option value="6">6.º semestre</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                            <option value="4">IV</option>
+                            <option value="5">V</option>
+                            <option value="6">VI</option>
 
                         </select>
 
@@ -953,18 +980,2514 @@
 
         </section>
 
+        <!-- _____________________________________ -->
+        <!-- SECCION II -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>02</span>
+
+                <div>
+                    <h2>Composición familiar</h2>
+                    <p>Registra a los integrantes de tu familia.</p>
+                </div>
+
+            </div>
 
 
-        <!-- ================================================= -->
+            <div class="grupo">
+
+                <div class="mensaje-informativo">
+
+                    <span class="icono-info">ⓘ</span>
+
+                    <p>
+                        Registra a los integrantes de tu familia,
+                        indicando sus datos personales, parentesco,
+                        ocupación e ingreso mensual.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="grupo">
+
+                <div class="encabezado-grupo">
+
+                    <div>
+
+                        <h3>Integrantes de la familia</h3>
+
+                        <p class="texto-ayuda">
+                            Agrega a las personas que forman parte de tu hogar.
+                        </p>
+
+                    </div>
+
+                    <span class="contador-familia">
+                        1 integrante
+                    </span>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- FAMILIAR 1 -->
+                <!-- =============================== -->
+
+                <div class="familiar" id="familiar_1">
+
+                    <div class="familiar-cabecera">
+
+                        <div class="familiar-numero">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h4>Integrante 1</h4>
+
+                            <p>
+                                Información del familiar
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grid">
+
+
+                        <!-- NOMBRES Y APELLIDOS -->
+
+                        <div class="campo campo-completo">
+
+                            <label for="familiar_nombre_1">
+                                Nombres y apellidos
+                            </label>
+
+                            <input
+                                type="text"
+                                id="familiar_nombre_1"
+                                name="familiar_nombre_1"
+                                placeholder="Ej. Juan Pérez Quispe"
+                            >
+
+                        </div>
+
+
+                        <!-- PARENTESCO -->
+
+                        <div class="campo">
+
+                            <label for="parentesco_1">
+                                Parentesco
+                            </label>
+
+                            <select
+                                id="parentesco_1"
+                                name="parentesco_1"
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="padre">
+                                    Padre
+                                </option>
+
+                                <option value="madre">
+                                    Madre
+                                </option>
+
+                                <option value="hermano">
+                                    Hermano(a)
+                                </option>
+
+                                <option value="conyuge">
+                                    Cónyuge
+                                </option>
+
+                                <option value="hijo">
+                                    Hijo(a)
+                                </option>
+
+                                <option value="abuelo">
+                                    Abuelo(a)
+                                </option>
+
+                                <option value="abuela">
+                                    Abuela
+                                </option>
+
+                                <option value="tio">
+                                    Tío(a)
+                                </option>
+
+                                <option value="primo">
+                                    Primo(a)
+                                </option>
+
+                                <option value="otro">
+                                    Otro familiar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SEXO -->
+
+                        <div class="campo">
+
+                            <label for="sexo_familiar_1">
+                                Sexo
+                            </label>
+
+                            <select
+                                id="sexo_familiar_1"
+                                name="sexo_familiar_1"
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="F">
+                                    Femenino
+                                </option>
+
+                                <option value="M">
+                                    Masculino
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- EDAD -->
+
+                        <div class="campo">
+
+                            <label for="edad_familiar_1">
+                                Edad
+                            </label>
+
+                            <input
+                                type="number"
+                                id="edad_familiar_1"
+                                name="edad_familiar_1"
+                                min="0"
+                                max="120"
+                                placeholder="Ej. 45"
+                            >
+
+                        </div>
+
+
+                        <!-- ESTADO CIVIL -->
+
+                        <div class="campo">
+
+                            <label for="estado_civil_familiar_1">
+                                Estado civil
+                            </label>
+
+                            <select
+                                id="estado_civil_familiar_1"
+                                name="estado_civil_familiar_1"
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="soltero">
+                                    Soltero(a)
+                                </option>
+
+                                <option value="casado">
+                                    Casado(a)
+                                </option>
+
+                                <option value="conviviente">
+                                    Conviviente
+                                </option>
+
+                                <option value="separado">
+                                    Separado(a)
+                                </option>
+
+                                <option value="divorciado">
+                                    Divorciado(a)
+                                </option>
+
+                                <option value="viudo">
+                                    Viudo(a)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- GRADO DE INSTRUCCIÓN -->
+
+                        <div class="campo">
+
+                            <label for="instruccion_familiar_1">
+                                Grado de instrucción
+                            </label>
+
+                            <select
+                                id="instruccion_familiar_1"
+                                name="instruccion_familiar_1"
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="sin_estudios">
+                                    Sin estudios
+                                </option>
+
+                                <option value="primaria">
+                                    Primaria
+                                </option>
+
+                                <option value="secundaria">
+                                    Secundaria
+                                </option>
+
+                                <option value="tecnico">
+                                    Técnico
+                                </option>
+
+                                <option value="universitario">
+                                    Universitario
+                                </option>
+
+                                <option value="posgrado">
+                                    Posgrado
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- OCUPACIÓN -->
+
+                        <div class="campo">
+
+                            <label for="ocupacion_familiar_1">
+                                Ocupación
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ocupacion_familiar_1"
+                                name="ocupacion_familiar_1"
+                                placeholder="Ej. Comerciante"
+                            >
+
+                        </div>
+
+
+                        <!-- INGRESO -->
+
+                        <div class="campo">
+
+                            <label for="ingreso_familiar_1">
+                                Ingreso mensual
+                            </label>
+
+                            <div class="entrada-moneda">
+
+                                <span>S/.</span>
+
+                                <input
+                                    type="number"
+                                    id="ingreso_familiar_1"
+                                    name="ingreso_familiar_1"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="0.00"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- AGREGAR FAMILIAR -->
+                <!-- =============================== -->
+
+                <button
+                    type="button"
+                    class="btn-agregar-familiar"
+                    onclick="agregarFamiliar()"
+                >
+
+                    <span>＋</span>
+
+                    Agregar otro integrante
+
+                </button>
+
+
+                <p class="ayuda-familia">
+
+                    Puedes agregar tantos integrantes como sean necesarios.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION III -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                    <div class="titulo-seccion">
+
+                        <span>03</span>
+
+                        <div>
+                            <h2>Situación familiar</h2>
+                            <p>Indica con quién vives y registra un familiar de contacto.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grupo">
+
+                        <h3>Convivencia familiar</h3>
+
+                        <p class="texto-ayuda">
+                            Selecciona la opción que mejor describa con quién vives actualmente.
+                        </p>
+
+
+                        <div class="campo campo-completo">
+
+                            <label>
+                                ¿Con quién vive actualmente?
+                            </label>
+
+                            <div class="opciones">
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="padre"
+                                    >
+
+                                    <span>Padre</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="madre"
+                                    >
+
+                                    <span>Madre</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="ambos"
+                                    >
+
+                                    <span>Ambos padres</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="hermanos"
+                                    >
+
+                                    <span>Hermanos</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="solo"
+                                    >
+
+                                    <span>Solo(a)</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="conyuge"
+                                    >
+
+                                    <span>Cónyuge</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="otros_familiares"
+                                    >
+
+                                    <span>Otros familiares</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="vive_con"
+                                        value="amigos"
+                                    >
+
+                                    <span>Con amigos</span>
+
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="grupo">
+
+                        <h3>Relaciones familiares</h3>
+
+                        <p class="texto-ayuda">
+                            ¿Cómo consideras actualmente las relaciones dentro de tu familia?
+                        </p>
+
+
+                        <div class="campo campo-completo">
+
+                            <label>
+                                Las relaciones familiares son:
+                            </label>
+
+
+                            <div class="opciones">
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="relaciones_familiares"
+                                        value="buenas"
+                                    >
+
+                                    <span>Buenas</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="relaciones_familiares"
+                                        value="regulares"
+                                    >
+
+                                    <span>Regulares</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="relaciones_familiares"
+                                        value="deficientes"
+                                    >
+
+                                    <span>Deficientes</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="relaciones_familiares"
+                                        value="malas"
+                                    >
+
+                                    <span>Malas</span>
+
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="grupo">
+
+                        <h3>Familiar de contacto</h3>
+
+                        <p class="texto-ayuda">
+                            Registra los datos de una persona de confianza a quien la institución pueda contactar.
+                        </p>
+
+
+                        <div class="grid">
+
+
+                            <!-- NOMBRE -->
+
+                            <div class="campo campo-completo">
+
+                                <label for="apoderado_nombre">
+                                    Nombres y apellidos
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="apoderado_nombre"
+                                    name="apoderado_nombre"
+                                    placeholder="Ej. María Pérez Quispe"
+                                >
+
+                            </div>
+
+
+                            <!-- PARENTESCO -->
+
+                            <div class="campo">
+
+                                <label for="apoderado_parentesco">
+                                    Parentesco
+                                </label>
+
+                                <select
+                                    id="apoderado_parentesco"
+                                    name="apoderado_parentesco"
+                                >
+
+                                    <option value="">
+                                        Selecciona
+                                    </option>
+
+                                    <option value="padre">
+                                        Padre
+                                    </option>
+
+                                    <option value="madre">
+                                        Madre
+                                    </option>
+
+                                    <option value="hermano">
+                                        Hermano(a)
+                                    </option>
+
+                                    <option value="conyuge">
+                                        Cónyuge
+                                    </option>
+
+                                    <option value="abuelo">
+                                        Abuelo(a)
+                                    </option>
+
+                                    <option value="tio">
+                                        Tío(a)
+                                    </option>
+
+                                    <option value="otro">
+                                        Otro
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- CELULAR -->
+
+                            <div class="campo">
+
+                                <label for="apoderado_celular">
+                                    Celular
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="apoderado_celular"
+                                    name="apoderado_celular"
+                                    placeholder="Ej. 999 999 999"
+                                    maxlength="15"
+                                >
+
+                            </div>
+
+
+                            <!-- OCUPACIÓN -->
+
+                            <div class="campo campo-completo">
+
+                                <label for="apoderado_ocupacion">
+                                    Ocupación
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="apoderado_ocupacion"
+                                    name="apoderado_ocupacion"
+                                    placeholder="Ej. Comerciante, docente, agricultor..."
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                   
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION IV -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                <div class="titulo-seccion">
+
+                    <span>04</span>
+
+                    <div>
+                        <h2>Vida social</h2>
+                        <p>Cuéntanos un poco sobre tu vida social y tiempo libre.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="grupo">
+
+                    <h3>Relaciones con tus compañeros</h3>
+
+                    <p class="texto-ayuda">
+                        Responde las siguientes preguntas según tu situación actual.
+                    </p>
+
+
+                    <!-- HACER AMIGOS -->
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            ¿Haces amigos con facilidad entre tus compañeros de clase?
+                        </label>
+
+                        <div class="opciones">
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="hace_amigos"
+                                    value="si"
+                                >
+
+                                <span>Sí</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="hace_amigos"
+                                    value="no"
+                                >
+
+                                <span>No</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PREFIERE ESTAR SOLO -->
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            ¿Prefieres estar solo(a)?
+                        </label>
+
+                        <div class="opciones">
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="prefiere_estar_solo"
+                                    value="si"
+                                >
+
+                                <span>Sí</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="prefiere_estar_solo"
+                                    value="no"
+                                >
+
+                                <span>No</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="grupo">
+
+                    <h3>Deportes</h3>
+
+                    <div class="campo campo-completo">
+
+                        <label for="deportes">
+                            ¿Qué deportes practicas?
+                        </label>
+
+                        <textarea
+                            id="deportes"
+                            name="deportes"
+                            rows="3"
+                            placeholder="Ej. Fútbol, vóley, básquet, atletismo..."
+                        ></textarea>
+
+                        <small class="texto-ayuda">
+                            Si no practicas ningún deporte, puedes escribir "Ninguno".
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+ 
+                <div class="grupo">
+
+                    <h3>Tiempo libre</h3>
+
+                    <div class="campo campo-completo">
+
+                        <label for="tiempo_libre">
+                            ¿Cómo ocupas tu tiempo libre?
+                        </label>
+
+                        <textarea
+                            id="tiempo_libre"
+                            name="tiempo_libre"
+                            rows="4"
+                            placeholder="Ej. Leer, escuchar música, jugar videojuegos, practicar deporte..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="grupo">
+
+                    <div class="mensaje-informativo">
+
+                        <span class="icono-info">ⓘ</span>
+
+                        <p>
+                            Esta información forma parte de la evaluación socioeconómica
+                            y será registrada junto con los demás datos de tu ficha.
+                        </p>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION V -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                <div class="titulo-seccion">
+
+                    <span>05</span>
+
+                    <div>
+                        <h2>Aspecto económico</h2>
+                        <p>Información sobre la situación económica del estudiante.</p>
+                    </div>
+
+                </div>
+
+                <div class="grupo">
+
+                    <h3>Dependencia económica</h3>
+
+                    <p class="texto-ayuda">
+                        ¿De quién depende económicamente el estudiante?
+                    </p>
+
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            Dependencia económica
+                        </label>
+
+                        <div class="opciones">
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="padre"
+                                >
+
+                                <span>Solo padre</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="madre"
+                                >
+
+                                <span>Solo madre</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="ambos"
+                                >
+
+                                <span>Ambos padres</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="hermanos"
+                                >
+
+                                <span>Hermanos</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="parientes"
+                                >
+
+                                <span>Parientes</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="mismo"
+                                >
+
+                                <span>De sí mismo</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="dependencia_economica"
+                                    value="otro"
+                                >
+
+                                <span>Otro</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OTRO -->
+
+                    <div class="campo">
+
+                        <label for="dependencia_otro">
+                            Especificar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dependencia_otro"
+                            name="dependencia_otro"
+                            placeholder="Especifica quién..."
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="grupo">
+
+                    <h3>Situación laboral</h3>
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            ¿Trabaja o ha trabajado anteriormente?
+                        </label>
+
+                        <div class="opciones">
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="trabaja"
+                                    value="si"
+                                >
+
+                                <span>Sí</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="trabaja"
+                                    value="no"
+                                >
+
+                                <span>No</span>
+
+                            </label>
+
+
+                            <label class="opcion">
+
+                                <input
+                                    type="radio"
+                                    name="trabaja"
+                                    value="continuara"
+                                >
+
+                                <span>Continuará trabajando</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="grupo">
+
+                    <h3>Información laboral</h3>
+
+                    <div class="grid">
+
+
+                        <!-- EMPRESA -->
+
+                        <div class="campo campo-completo">
+
+                            <label for="nombre_empresa">
+                                Nombre de la empresa
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre_empresa"
+                                name="nombre_empresa"
+                                placeholder="Ej. Empresa ABC S.A.C."
+                            >
+
+                        </div>
+
+
+                        <!-- CARGO -->
+
+                        <div class="campo">
+
+                            <label for="cargo">
+                                Cargo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cargo"
+                                name="cargo"
+                                placeholder="Ej. Asistente"
+                            >
+
+                        </div>
+
+
+                        <!-- TIPO DE TRABAJO -->
+
+                        <div class="campo">
+
+                            <label>
+                                Tipo de trabajo
+                            </label>
+
+                            <div class="opciones">
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="tipo_trabajo"
+                                        value="dependiente"
+                                    >
+
+                                    <span>Dependiente</span>
+
+                                </label>
+
+
+                                <label class="opcion">
+
+                                    <input
+                                        type="radio"
+                                        name="tipo_trabajo"
+                                        value="independiente"
+                                    >
+
+                                    <span>Independiente</span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUELDO -->
+
+                        <div class="campo">
+
+                            <label for="sueldo_mensual">
+                                Sueldo mensual
+                            </label>
+
+                            <div class="entrada-moneda">
+
+                                <span>S/.</span>
+
+                                <input
+                                    type="number"
+                                    id="sueldo_mensual"
+                                    name="sueldo_mensual"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="0.00"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION VI -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                                <div class="titulo-seccion">
+
+                                    <span>06</span>
+
+                                    <div>
+                                        <h2>Vivienda y servicios</h2>
+                                        <p>Información sobre la vivienda donde resides actualmente.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <h3>Tenencia de la vivienda</h3>
+
+                                    <p class="texto-ayuda">
+                                        Indica cuál es la situación de la vivienda donde resides actualmente.
+                                    </p>
+
+                                    <div class="campo campo-completo">
+
+                                        <label>
+                                            Tenencia de la vivienda
+                                        </label>
+
+                                        <div class="opciones">
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="propia"
+                                                >
+
+                                                <span>Propia</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="alquilada"
+                                                >
+
+                                                <span>Alquilada</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="alquiler_venta"
+                                                >
+
+                                                <span>Alquiler / venta</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="alojada"
+                                                >
+
+                                                <span>Alojada</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="guardiania"
+                                                >
+
+                                                <span>Guardianía</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="tenencia_vivienda"
+                                                    value="otro"
+                                                >
+
+                                                <span>Otro</span>
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- OTRO TIPO DE TENENCIA -->
+
+                                    <div class="campo">
+
+                                        <label for="tenencia_otro">
+                                            Especificar
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="tenencia_otro"
+                                            name="tenencia_otro"
+                                            placeholder="Especifica..."
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <h3>Tipo de vivienda</h3>
+
+                                    <div class="grid">
+
+
+                                        <div class="campo campo-completo">
+
+                                            <label>
+                                                Tipo de vivienda
+                                            </label>
+
+                                            <div class="opciones">
+
+                                                <label class="opcion">
+
+                                                    <input
+                                                        type="radio"
+                                                        name="tipo_vivienda"
+                                                        value="casa"
+                                                    >
+
+                                                    <span>Casa</span>
+
+                                                </label>
+
+
+                                                <label class="opcion">
+
+                                                    <input
+                                                        type="radio"
+                                                        name="tipo_vivienda"
+                                                        value="departamento"
+                                                    >
+
+                                                    <span>Departamento</span>
+
+                                                </label>
+
+
+                                                <label class="opcion">
+
+                                                    <input
+                                                        type="radio"
+                                                        name="tipo_vivienda"
+                                                        value="habitacion"
+                                                    >
+
+                                                    <span>Habitación</span>
+
+                                                </label>
+
+
+                                                <label class="opcion">
+
+                                                    <input
+                                                        type="radio"
+                                                        name="tipo_vivienda"
+                                                        value="otro"
+                                                    >
+
+                                                    <span>Otro</span>
+
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- NÚMERO DE HABITACIONES -->
+
+                                        <div class="campo">
+
+                                            <label for="numero_habitaciones">
+                                                N.º de habitaciones
+                                            </label>
+
+                                            <small class="texto-ayuda">
+                                                No contar los baños.
+                                            </small>
+
+                                            <input
+                                                type="number"
+                                                id="numero_habitaciones"
+                                                name="numero_habitaciones"
+                                                min="1"
+                                                placeholder="Ej. 3"
+                                            >
+
+                                        </div>
+
+
+                                        <!-- OTRO -->
+
+                                        <div class="campo">
+
+                                            <label for="tipo_vivienda_otro">
+                                                Especificar otro tipo
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                id="tipo_vivienda_otro"
+                                                name="tipo_vivienda_otro"
+                                                placeholder="Especifica..."
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <h3>Material de construcción</h3>
+
+                                    <div class="campo campo-completo">
+
+                                        <label>
+                                            ¿Cuál es el principal material de construcción de la vivienda?
+                                        </label>
+
+                                        <div class="opciones">
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="noble"
+                                                >
+
+                                                <span>Material noble</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="drywall"
+                                                >
+
+                                                <span>Drywall</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="adobe"
+                                                >
+
+                                                <span>Adobe</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="madera"
+                                                >
+
+                                                <span>Madera</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="carton_plastico"
+                                                >
+
+                                                <span>Cartón / plástico</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="material_construccion"
+                                                    value="otro"
+                                                >
+
+                                                <span>Otro</span>
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="campo">
+
+                                        <label for="material_otro">
+                                            Especificar otro material
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="material_otro"
+                                            name="material_otro"
+                                            placeholder="Especifica..."
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="grupo">
+
+                                    <h3>Servicios básicos</h3>
+
+                                    <p class="texto-ayuda">
+                                        Selecciona los servicios con los que cuenta tu vivienda.
+                                    </p>
+
+                                    <div class="opciones servicios">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="luz"
+                                            >
+
+                                            <span>Luz</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="agua"
+                                            >
+
+                                            <span>Agua</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="desague"
+                                            >
+
+                                            <span>Desagüe</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="telefono"
+                                            >
+
+                                            <span>Teléfono</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="internet"
+                                            >
+
+                                            <span>Internet</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="servicios_basicos"
+                                                value="tv_cable"
+                                            >
+
+                                            <span>TV cable</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <div class="mensaje-informativo">
+
+                                        <span class="icono-info">ⓘ</span>
+
+                                        <p>
+                                            La información proporcionada corresponde a las condiciones
+                                            actuales de la vivienda del estudiante.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION VII -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                                <div class="titulo-seccion">
+
+                                    <span>07</span>
+
+                                    <div>
+                                        <h2>Alimentación</h2>
+                                        <p>Información sobre los hábitos de alimentación del estudiante.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <h3>Lugar donde te alimentas</h3>
+
+                                    <p class="texto-ayuda">
+                                        Indica principalmente dónde consumes tus alimentos.
+                                    </p>
+
+                                    <div class="campo campo-completo">
+
+                                        <label>
+                                            ¿Dónde te alimentas habitualmente?
+                                        </label>
+
+                                        <div class="opciones">
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="lugar_alimentacion"
+                                                    value="casa"
+                                                >
+
+                                                <span>Su casa</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="lugar_alimentacion"
+                                                    value="restaurante"
+                                                >
+
+                                                <span>Restaurante</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="lugar_alimentacion"
+                                                    value="pension"
+                                                >
+
+                                                <span>Pensión</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="lugar_alimentacion"
+                                                    value="quiosco"
+                                                >
+
+                                                <span>Quiosco</span>
+
+                                            </label>
+
+
+                                            <label class="opcion">
+
+                                                <input
+                                                    type="radio"
+                                                    name="lugar_alimentacion"
+                                                    value="otro"
+                                                >
+
+                                                <span>Otro</span>
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- OTRO LUGAR -->
+
+                                    <div class="campo">
+
+                                        <label for="lugar_alimentacion_otro">
+                                            Especificar otro lugar
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="lugar_alimentacion_otro"
+                                            name="lugar_alimentacion_otro"
+                                            placeholder="Especifica..."
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <h3>Comidas al día</h3>
+
+                                    <p class="texto-ayuda">
+                                        Selecciona las comidas que realizas habitualmente durante el día.
+                                    </p>
+
+                                    <div class="opciones servicios">
+
+
+                                        <!-- DESAYUNO -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="desayuno"
+                                            >
+
+                                            <span>Desayuno</span>
+
+                                        </label>
+
+
+                                        <!-- ALMUERZO -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="almuerzo"
+                                            >
+
+                                            <span>Almuerzo</span>
+
+                                        </label>
+
+
+                                        <!-- CENA -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="cena"
+                                            >
+
+                                            <span>Cena</span>
+
+                                        </label>
+
+
+                                        <!-- MEDIA MAÑANA -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="media_manana"
+                                            >
+
+                                            <span>Media mañana</span>
+
+                                        </label>
+
+
+                                        <!-- MEDIA TARDE -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="media_tarde"
+                                            >
+
+                                            <span>Media tarde</span>
+
+                                        </label>
+
+
+                                        <!-- OTRO -->
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="checkbox"
+                                                name="comidas_dia"
+                                                value="otro"
+                                            >
+
+                                            <span>Otro</span>
+
+                                        </label>
+
+                                    </div>
+
+
+                                    <!-- ESPECIFICAR OTRO -->
+
+                                    <div class="campo">
+
+                                        <label for="comida_otro">
+                                            Especificar otra comida
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="comida_otro"
+                                            name="comida_otro"
+                                            placeholder="Especifica..."
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="grupo">
+
+                                    <div class="mensaje-informativo">
+
+                                        <span class="icono-info">ⓘ</span>
+
+                                        <p>
+                                            Selecciona todas las opciones que correspondan a tu situación
+                                            habitual.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+        </section>
+
+        <!-- _____________________________________ -->
+        <!-- SECCION VIII -->
+        <!-- _____________________________________ -->
+
+        <section class="seccion">
+
+                            <div class="titulo-seccion">
+
+                                <span>08</span>
+
+                                <div>
+                                    <h2>Salud</h2>
+                                    <p>Información relacionada con la situación de salud del estudiante.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Seguro de salud</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Qué tipo de seguro de salud tienes?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tipo_seguro"
+                                                value="essalud"
+                                            >
+
+                                            <span>EsSalud</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tipo_seguro"
+                                                value="sis"
+                                            >
+
+                                            <span>SIS</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tipo_seguro"
+                                                value="eps"
+                                            >
+
+                                            <span>EPS</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tipo_seguro"
+                                                value="otro"
+                                            >
+
+                                            <span>Otro</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tipo_seguro"
+                                                value="ninguno"
+                                            >
+
+                                            <span>Ninguno</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="seguro_otro">
+                                        Especificar otro seguro
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="seguro_otro"
+                                        name="seguro_otro"
+                                        placeholder="Especifica..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Problemas de salud</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Tienes algún problema de salud que requiera tratamiento continuo?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tratamiento_continuo"
+                                                value="si"
+                                            >
+
+                                            <span>Sí</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="tratamiento_continuo"
+                                                value="no"
+                                            >
+
+                                            <span>No</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo campo-completo">
+
+                                    <label for="problema_salud">
+                                        Breve descripción
+                                    </label>
+
+                                    <textarea
+                                        id="problema_salud"
+                                        name="problema_salud"
+                                        rows="3"
+                                        placeholder="Describe brevemente el problema de salud..."
+                                    ></textarea>
+
+                                </div>
+
+
+                                <!-- ALERGIAS -->
+
+                                <div class="campo campo-completo">
+
+                                    <label for="alergias">
+                                        ¿Presentas alguna alergia?
+                                    </label>
+
+                                    <textarea
+                                        id="alergias"
+                                        name="alergias"
+                                        rows="2"
+                                        placeholder="Indica las alergias que tengas o escribe 'Ninguna'..."
+                                    ></textarea>
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Discapacidad</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Presentas alguna discapacidad?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="discapacidad"
+                                                value="si"
+                                            >
+
+                                            <span>Sí</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="discapacidad"
+                                                value="no"
+                                            >
+
+                                            <span>No</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="tipo_discapacidad">
+                                        Tipo de discapacidad
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="tipo_discapacidad"
+                                        name="tipo_discapacidad"
+                                        placeholder="Especifica el tipo..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Enfermedades</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Sufres de alguna enfermedad?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="enfermedad"
+                                                value="si"
+                                            >
+
+                                            <span>Sí</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="enfermedad"
+                                                value="no"
+                                            >
+
+                                            <span>No</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nombre_enfermedad">
+                                        ¿Cuál?
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nombre_enfermedad"
+                                        name="nombre_enfermedad"
+                                        placeholder="Indica la enfermedad..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Medicamentos</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Tomas algún tipo de medicamento para tratar tu enfermedad?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="toma_medicamento"
+                                                value="si"
+                                            >
+
+                                            <span>Sí</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="toma_medicamento"
+                                                value="no"
+                                            >
+
+                                            <span>No</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nombre_medicamento">
+                                        ¿Cuál?
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nombre_medicamento"
+                                        name="nombre_medicamento"
+                                        placeholder="Indica el medicamento..."
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Información adicional de salud</h3>
+
+                                <div class="grid">
+
+                                    <div class="campo">
+
+                                        <label for="operaciones">
+                                            Operaciones
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="operaciones"
+                                            name="operaciones"
+                                            placeholder="Indica si corresponde..."
+                                        >
+
+                                    </div>
+
+
+                                    <div class="campo">
+
+                                        <label for="otros_salud">
+                                            Otros
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="otros_salud"
+                                            name="otros_salud"
+                                            placeholder="Especifica..."
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Información personal</h3>
+
+                                <div class="campo">
+
+                                    <label for="religion">
+                                        Religión
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="religion"
+                                        name="religion"
+                                        placeholder="Opcional"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="grupo">
+
+                                <h3>Estudios adicionales</h3>
+
+                                <div class="campo campo-completo">
+
+                                    <label>
+                                        ¿Tienes algún estudio técnico o profesional?
+                                    </label>
+
+                                    <div class="opciones">
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="estudio_tecnico"
+                                                value="si"
+                                            >
+
+                                            <span>Sí</span>
+
+                                        </label>
+
+
+                                        <label class="opcion">
+
+                                            <input
+                                                type="radio"
+                                                name="estudio_tecnico"
+                                                value="no"
+                                            >
+
+                                            <span>No</span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo campo-completo">
+
+                                    <label for="nombre_estudio">
+                                        Escriba el estudio
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nombre_estudio"
+                                        name="nombre_estudio"
+                                        placeholder="Ej. Técnico en Computación e Informática"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="grupo">
+
+                                <div class="mensaje-informativo">
+
+                                    <span class="icono-info">ⓘ</span>
+
+                                    <p>
+                                        La información contemplada en el presente documento constituye una declaración jurada del informante, quien declara la veracidad de la misma.
+                                        
+                                        La información declarada será verificada y, en caso de determinarse que la información proporcionada es falsa o distorsionada, se someterá a las sanciones disciplinarias correspondientes, además de las acciones administrativas, civiles y penales a que hubiera lugar, conforme a lo previsto por el artículo 411 del Código Penal.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- ACEPTACIÓN -->
+
+                                <div class="campo campo-completo">
+
+                                    <label class="opcion">
+
+                                        <input
+                                            type="checkbox"
+                                            id="acepta_declaracion"
+                                            name="acepta_declaracion"
+                                            value="si"
+                                        >
+
+                                        <span>
+                                            Declaro que la información proporcionada es verdadera
+                                            y correcta.
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+        </section>
+
+
         <!-- BOTONES -->
-        <!-- ================================================= -->
+        
 
         <div class="navegacion">
 
             <button
                 type="button"
                 class="btn btn-secundario"
-                disabled
+                onclick="anteriorSeccion()"
             >
                 ← Anterior
             </button>
@@ -983,7 +3506,7 @@
     </main>
 
 
-    <script src="{{ url_for('static', filename='js/encuesta.js') }}"></script>
+    <script src="static/js/encuesta.js"></script>
 
 </body>
 

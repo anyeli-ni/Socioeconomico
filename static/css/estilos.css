@@ -241,6 +241,15 @@ select:focus {
     display: block;
 }
 
+.indicaciones {
+    color: #4b4f57;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
 @media (max-width: 700px) {
 
     .contenedor {

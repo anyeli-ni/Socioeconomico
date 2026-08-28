@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Panel Administrador | Evaluación Socioeconómica</title>
+
+<link
+    rel="stylesheet"
+    href="static/css/admin.css"
+>
+
+
+</head>
+
+<body>
+
+
+<!-- CONTENEDOR PRINCIPAL -->
+
+<div class="admin-contenedor">
+
+
+    <!-- MENÚ LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>Socioeconómico</h2>
+
+            <p>Panel administrador</p>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav class="menu">
+
+            <button
+                class="menu-item activo"
+                onclick="mostrarPagina('inicio')"
+            >
+                <span>⌂</span>
+                Inicio
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="mostrarPagina('estudiantes')"
+            >
+                <span>👨‍🎓</span>
+                Estudiantes
+            </button>
+
+
+           
+            <button
+                class="menu-item"
+                onclick="mostrarPagina('encuestas')"
+            >
+                <span>📝</span>
+                Encuestas
+            </button>
+
+        </nav>
+
+
+        <!-- PARTE INFERIOR -->
+
+        <div class="sidebar-footer">
+
+            <button class="menu-item">
+
+                <span>⚙</span>
+                Configuración
+
+            </button>
+
+
+            <button class="menu-item cerrar-sesion">
+
+                <span>↪</span>
+                Cerrar sesión
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="contenido">
+
+
+        <!-- ================================= -->
+        <!-- INICIO -->
+        <!-- ================================= -->
+
+        <section
+            id="inicio"
+            class="pagina activa"
+        >
+
+            <header class="pagina-header">
+
+                <div>
+
+                    <h1>Panel principal</h1>
+
+                    <p>
+                        Resumen general del sistema.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- TARJETAS -->
+
+            <div class="estadisticas">
+
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        👨‍🎓
+                    </div>
+
+                    <div>
+
+                        <span>Total estudiantes</span>
+
+                        <strong>0</strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>Encuestas completadas</span>
+
+                        <strong>0</strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="tarjeta">
+
+                    <div class="tarjeta-icono">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <span>Encuestas pendientes</span>
+
+                        <strong>0</strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACTIVIDAD RECIENTE -->
+
+            <div class="panel">
+
+                <h2>Actividad reciente</h2>
+
+                <div class="sin-datos">
+
+                    Aún no hay actividad registrada.
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- ESTUDIANTES -->
+        <!-- ================================= -->
+
+        <section
+            id="estudiantes"
+            class="pagina"
+        >
+
+            <header class="pagina-header">
+
+                <div>
+
+                    <h1>Estudiantes</h1>
+
+                    <p>
+                        Gestiona los estudiantes registrados.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="btn-principal"
+                    onclick="mostrarPagina('registrar')"
+                >
+                    + Registrar estudiante
+                </button>
+
+            </header>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    placeholder="Buscar por DNI o nombre..."
+                >
+
+                <button>
+                    🔍 Buscar
+                </button>
+
+            </div>
+
+
+
+            <!-- TABLA -->
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>DNI</th>
+
+                            <th>Estudiante</th>
+
+                            <th>Programa</th>
+
+                            <th>Estado</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td colspan="5">
+
+                                Aún no hay estudiantes registrados.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- REGISTRAR ESTUDIANTE -->
+        <!-- ================================= -->
+
+        <section
+            id="registrar"
+            class="pagina"
+        >
+
+            <header class="pagina-header">
+
+                <div>
+
+                    <h1>Registrar estudiante</h1>
+
+                    <p>
+                        Ingresa los datos iniciales del estudiante.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <div class="formulario-admin">
+
+                <div class="form-grid">
+
+
+                    <div class="campo">
+
+                        <label for="admin_dni">
+                            DNI / CE
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin_dni"
+                            placeholder="Ej. 12345678"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_nombres">
+                            Nombres
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin_nombres"
+                            placeholder="Nombres"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_apellido_paterno">
+                            Apellido paterno
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin_apellido_paterno"
+                            placeholder="Apellido paterno"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_apellido_materno">
+                            Apellido materno
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin_apellido_materno"
+                            placeholder="Apellido materno"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="admin_correo"
+                            placeholder="correo@ejemplo.com"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_celular">
+                            Celular
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="admin_celular"
+                            placeholder="999 999 999"
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_programa">
+                            Programa de estudios
+                        </label>
+
+                        <select id="admin_programa">
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>
+                                Arquitectura de Plataformas y Servicios de TI
+                            </option>
+
+                            <option>
+                                Enfermería Técnica
+                            </option>
+
+                            <option>
+                                Mecánica Automotriz
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="admin_semestre">
+                            Semestre
+                        </label>
+
+                        <select id="admin_semestre">
+
+                            <option value="">
+                                Selecciona
+                            </option>
+
+                            <option value="1">
+                                1.er semestre
+                            </option>
+
+                            <option value="2">
+                                2.º semestre
+                            </option>
+
+                            <option value="3">
+                                3.er semestre
+                            </option>
+
+                            <option value="4">
+                                4.º semestre
+                            </option>
+
+                            <option value="5">
+                                5.º semestre
+                            </option>
+
+                            <option value="6">
+                                6.º semestre
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-formulario">
+
+                    <button
+                        class="btn-secundario"
+                        onclick="mostrarPagina('estudiantes')"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        class="btn-principal"
+                        onclick="registrarEstudiante()"
+                    >
+                        Registrar estudiante
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- ENCUESTAS -->
+        <!-- ================================= -->
+
+        <section
+            id="encuestas"
+            class="pagina"
+        >
+
+            <header class="pagina-header">
+
+                <div>
+
+                    <h1>Encuestas</h1>
+
+                    <p>
+                        Realiza el seguimiento de las encuestas.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros">
+
+                <select>
+
+                    <option>
+                        Todas las encuestas
+                    </option>
+
+                    <option>
+                        Pendientes
+                    </option>
+
+                    <option>
+                        En proceso
+                    </option>
+
+                    <option>
+                        Completadas
+                    </option>
+
+                </select>
+
+
+
+                <select>
+
+                    <option>
+                        Todos los programas
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Estudiante</th>
+
+                            <th>Progreso</th>
+
+                            <th>Estado</th>
+
+                            <th>Acción</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td colspan="4">
+
+                                Aún no hay encuestas registradas.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="static/js/admin.js"></script>
+
+
+</body>
+
+</html>

@@ -200,68 +200,6 @@
 
                     </div>
 
-                </div>
-            </div>
-
-      
-            <div class="grupo">
-                <div class="grid">
-                    <div class="campo campo-completo">
-                    <div class="indicacion">
-
-                        <small>
-                            ⓘ  Indica el lugar donde naciste.
-                        </small>
-
-                    </div>
-                    </div>
-
-                    <div class="campo">
-
-                        <label for="departamento">
-                            Departamento
-                        </label>
-
-                        <input
-                            type="text"
-                            id="departamento"
-                            name="departamento"
-                            placeholder="Departamento"
-                        >
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label for="provincia">
-                            Provincia
-                        </label>
-
-                        <input
-                            type="text"
-                            id="provincia"
-                            name="provincia"
-                            placeholder="Provincia"
-                        >
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label for="distrito">
-                            Distrito
-                        </label>
-
-                        <input
-                            type="text"
-                            id="distrito"
-                            name="distrito"
-                            placeholder="Distrito"
-                        >
-
-                    </div>
 
                     <!-- Correo -->
 
@@ -421,19 +359,82 @@
                                 placeholder="Ej. 0"
                             >
 
+
+                </div>
+            </div>
+            </div>
+
+      
+            <div class="grupo">
+                <div class="grid">
+                    <div class="campo campo-completo">
+                    <div class="indicacion">
+
+                        <small>
+                            ⓘ  Por favor, indica tu lugar de nacimiento detallando departamento, provincia y distrito.
+                        </small>
+
+                    </div>
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="departamento">
+                            Departamento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departamento"
+                            name="departamento"
+                            placeholder="Departamento"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="provincia">
+                            Provincia
+                        </label>
+
+                        <input
+                            type="text"
+                            id="provincia"
+                            name="provincia"
+                            placeholder="Provincia"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="distrito">
+                            Distrito
+                        </label>
+
+                        <input
+                            type="text"
+                            id="distrito"
+                            name="distrito"
+                            placeholder="Distrito"
+                        >
+
+                    </div>
+
+                    
                        
 
                                         
-                            <div class="indicacion">
+                    <div class="indicacion">
 
                         <small>
                             * Ingresa tu dirección actual. Los campos que no correspondan a tu domicilio pueden dejarse vacíos.
                         </small>
 
                     </div>
-
-                            <div class="grid">
-
 
                                 <!-- Calle / Avenida / Asociación -->
 
@@ -543,17 +544,24 @@
 
                             </div>
 
+                            <br>
 
+
+                <div class="campo campo-completo">
                     <div class="indicacion">
 
                         <small>
-                            * Indica el lugar actual donde vive.
+                            ⓘ  Por favor, indica dónde vives actualmente detallando departamento, provincia y distrito.
                         </small>
 
                     </div>
+                </div>
 
+                <br>
+        
+                <div class="grid">
                     <div class="campo">
-
+                        
                         <label for="departamento">
                             Departamento
                         </label>
@@ -564,7 +572,7 @@
                             name="departamento"
                             placeholder="Departamento"
                         >
-
+                        
                     </div>
 
 
@@ -599,7 +607,7 @@
 
                     </div>
 
-
+                </div>
 
 
 
@@ -830,6 +838,7 @@
 
             <div class="grupo">
 
+
                 <h3>Motivo de la beca</h3>
 
                 <div class="opciones">
@@ -840,6 +849,7 @@
                             type="radio"
                             name="motivo_beca"
                             value="situacion_economica"
+                            onchange="mostrarOtroMotivo(false)"
                         >
 
                         <span>Situación económica</span>
@@ -853,6 +863,7 @@
                             type="radio"
                             name="motivo_beca"
                             value="rendimiento_academico"
+                            onchange="mostrarOtroMotivo(false)"
                         >
 
                         <span>Rendimiento académico</span>
@@ -866,6 +877,7 @@
                             type="radio"
                             name="motivo_beca"
                             value="orfandad"
+                            onchange="mostrarOtroMotivo(false)"
                         >
 
                         <span>Orfandad</span>
@@ -879,6 +891,7 @@
                             type="radio"
                             name="motivo_beca"
                             value="otros"
+                            onchange="mostrarOtroMotivo(true)"
                         >
 
                         <span>Otros</span>
@@ -887,7 +900,32 @@
 
                 </div>
 
-            </div>
+<br>
+<!-- ESPECIFICAR OTRO MOTIVO -->
+
+<div
+    class="campo campo-completo"
+    id="campo_otro_motivo"
+    style="display: none;"
+>
+
+    <label for="otro_motivo">
+        <small>Especifica el motivo
+        </small> 
+    </label>
+
+    <input
+        type="text"
+        id="otro_motivo"
+        name="otro_motivo"
+        placeholder="Escribe el motivo de la beca"
+    >
+
+</div>
+
+
+</div>
+
 
 
 
@@ -999,20 +1037,16 @@
             </div>
 
 
-            <div class="grupo">
-
-                <div class="mensaje-informativo">
-
-                    <span class="icono-info">ⓘ</span>
-
-                    <p>
-                        Registra a los integrantes de tu familia,
+            <div class="grupo">  
+                <div class="campo campo-completo">
+                    <div class="indicaciones">
+                        <small>
+                            ⓘ  Registra a los integrantes de tu familia,
                         indicando sus datos personales, parentesco,
                         ocupación e ingreso mensual.
-                    </p>
-
+                        </small>
+                    </div>
                 </div>
-
             </div>
 
 

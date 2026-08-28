@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def encuesta():
-    return render_template("encuesta.html")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":

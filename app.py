@@ -1,0 +1,12 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def encuesta():
+    return render_template("encuesta.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

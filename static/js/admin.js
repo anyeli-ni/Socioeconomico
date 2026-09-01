@@ -4,7 +4,7 @@
 
 function mostrarPagina(idPagina) {
 
-```
+
 // Ocultar todas las páginas
 const paginas = document.querySelectorAll(".pagina");
 
@@ -47,7 +47,7 @@ botonesMenu.forEach(function (boton) {
     }
 
 });
-```
+
 
 }
 
@@ -57,7 +57,7 @@ botonesMenu.forEach(function (boton) {
 
 function registrarEstudiante() {
 
-```
+
 const dni = document.getElementById("admin_dni").value.trim();
 
 const nombres = document
@@ -159,6 +159,6 @@ document.getElementById("admin_semestre").value = "";
 
 // Volver a estudiantes
 mostrarPagina("estudiantes");
-```
+
 
 }

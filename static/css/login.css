@@ -1,0 +1,297 @@
+/* =========================================================
+   LOGIN - EVALUACIÓN SOCIOECONÓMICA
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURACIÓN GENERAL
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: #f4f6f8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #1f2937;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR
+   --------------------------------------------------------- */
+
+.login-contenedor {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   TARJETA
+   --------------------------------------------------------- */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ---------------------------------------------------------
+   ENCABEZADO
+   --------------------------------------------------------- */
+
+.login-encabezado {
+
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+
+.login-logo {
+    width: 100%;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.login-logo img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.login-encabezado h1 {
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+
+    color: #111827;
+}
+
+
+.login-encabezado p {
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPOS
+   --------------------------------------------------------- */
+
+.campo {
+
+    margin-bottom: 20px;
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+.campo input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.campo input:focus {
+
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+.campo input::placeholder {
+
+    color: #9ca3af;
+}
+
+
+/* ---------------------------------------------------------
+   MENSAJE
+   --------------------------------------------------------- */
+
+.mensaje-login {
+
+    min-height: 20px;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN
+   --------------------------------------------------------- */
+
+.btn-login {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-login:hover {
+
+    background: #4338ca;
+
+}
+
+
+.btn-login:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ---------------------------------------------------------
+   PIE
+   --------------------------------------------------------- */
+
+.login-pie {
+
+    text-align: center;
+
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.login-pie p {
+
+    font-size: 12px;
+
+    color: #6b7280;
+
+    margin-bottom: 5px;
+}
+
+
+.login-pie span {
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+    .login-contenedor {
+
+        padding: 20px;
+    }
+
+
+    .login-card {
+
+        padding: 30px 24px;
+    }
+
+
+    .login-encabezado h1 {
+
+        font-size: 21px;
+    }
+
+}
